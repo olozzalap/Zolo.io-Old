@@ -1,0 +1,11 @@
+@import "_partials/_variables.scss";
+
+html {
+	font-family: 'Raleway', sans-serif;
+}
+
+.hero {
+	background-image: url(/images/hero.jpg);
+	padding-top: 200px;
+	padding-bottom: 20%;
+}
