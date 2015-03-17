@@ -1,11 +1,64 @@
 @import "_partials/_variables.scss";
 
+* {
+	box-sizing: border-box;
+}
 html {
 	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+body {
+	margin: 0;
 }
 
-.hero {
-	background-image: url(/images/hero.jpg);
-	padding-top: 200px;
-	padding-bottom: 20%;
+header {
+	font-family: 'Lobster Two', cursive;
+	height: 5em;
+
+
+	h1, p, .message-wrap {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+	}
+	h1 {
+		font-style: italic;
+		font-size: 2em;
+		text-align: left;
+	}
+	p {
+		text-align: center;
+	}
+	.message-wrap {
+		text-align: right;
+
+		h4 {
+			margin: .8em 0;
+		}
+	}
+}
+
+.home {
+	.hero {
+		background-image: url(http://www.zolo.io/images/hero.jpg);
+		padding-top: 300px;
+		padding-bottom: 20%;
+	}
+}
+
+
+/*	Utility Classes
+======================= */
+.text-centered {
+	text-align: center;
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.full-width-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
