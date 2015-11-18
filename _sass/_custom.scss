@@ -1,0 +1,179 @@
+* {
+	transition: all .4s ease;
+}
+body {
+	color: $slate;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+h1 {
+	font-size: 3em;
+}
+h2 {
+	font-size: 2em;
+}
+a {
+	color: $slate;
+	&:hover {
+		text-decoration: none;
+	}
+	&:visited {
+		color: $slate;
+	}
+}
+
+/*	Utility Classes
+======================= */
+.text-centered {
+	text-align: center;
+}
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.full-width-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.heading-font {
+	font-family: 'Arvo', serif;
+}
+.content-font {
+	font-family: 'Raleway', sans-serif;
+}
+.web:hover {
+	color: $cream;
+	background-color: $slate;
+}
+.music:hover {
+	background-color: $orange;
+	color: $blue;
+}
+.biz:hover {
+	background-color: $slate;
+	color: $orange;
+}
+.travel:hover {
+	background-color: $teal;
+	color: $cream;
+}
+.musings:hover {
+	background-color: $blue;
+	color: $orange;
+}
+.podcast:hover {
+	background-color: $cream;
+	color: $blue;
+}
+
+
+.site-header {
+	@extend .heading-font;
+	border: none !important;
+	padding: 8px 0;
+	position: absolute !important;
+	top: 0;
+	width: 100%;
+	.wrapper {
+		background-color: rgba($blue, .8);
+	}
+	.site-title, .site-nav, .message-wrap {
+		display: inline-block;
+		width: 33%;
+		vertical-align: top;
+		margin: 0;
+	}
+	h1 {
+		margin-bottom: 0;
+	}
+	h4 {
+		margin-bottom: 4px;
+		text-align: right;
+	}
+	.site-nav {
+		text-align: center;
+		float: none;
+	}
+	.message-wrap {
+		float: right;
+	}
+}
+
+
+.page-content {
+	padding-top: 0;
+	padding-bottom: 25px;
+	text-align: center;
+	.hero {
+		@extend .full-width-image;
+		background-image: url(/images/silk-dreamscope-jeweledbird-1920.jpg);
+		padding-top: 250px;
+		padding-bottom: 16%;
+		margin-bottom: 4%;
+	}
+	.zolo-page-list {
+		h1 {
+			font-weight: 600;
+		}
+		h1:hover .social-icon {
+			opacity: 1;
+		}
+		.social-icon {
+			@extend .full-width-image;
+			display: inline-block;
+			opacity: 0;
+			vertical-align: middle;
+			height: 64px;
+			width: 64px;
+			position: relative;
+			top: -5px;
+			left: 10px;
+			&.fnf {
+				background-image: url(http://flintandfoster.com/wp-content/uploads/2014/06/IPadRetina_Logo.png);
+			}
+			&.li {
+				background-image: url(/images/li.png);
+			}
+			&.tf {
+				background-image: url(/images/photo.jpg);
+			}
+			&.tw {
+				background-image: url(/images/tw.svg);
+			}
+			&.sc {
+				background-image: url(/images/sc.svg);
+			}
+			&.em {
+				background-image: url(/images/em.svg);
+			}
+		}
+	}
+	.icons-attr {
+		font-size: .5em;
+	}
+}
+.post {
+	padding-top: 72px;
+}
+
+footer {
+	@extend .heading-font;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	// display: none;
+
+	a {
+		display: inline-block;
+		float: left;
+		width: 16.666666%;
+		font-size: 1em;
+		background-color: $slate;
+		color: white;
+		font-weight: bold;
+		text-shadow: 1px 1px $slate-bg;
+	}
+}
