@@ -1,5 +1,5 @@
 * {
-	transition: all .4s ease;
+	transition: all .5s ease;
 }
 body {
 	color: $slate;
@@ -11,6 +11,9 @@ h1 {
 }
 h2 {
 	font-size: 2em;
+}
+h3 {
+	font-weight: 400;
 }
 a {
 	color: $slate;
@@ -43,29 +46,38 @@ a {
 .content-font {
 	font-family: 'Raleway', sans-serif;
 }
+.page-link {
+	background-color: $slate !important;
+	color: white !important;
+}
+.rec-title {
+	font-weight: 100;
+	transition: 0s;
+}
+
 .web:hover {
-	color: $cream;
-	background-color: $slate;
+	color: $cream !important;
+	background-color: $slate !important;
 }
 .music:hover {
-	background-color: $orange;
-	color: $web-xdark;
+	background-color: $orange !important;
+	color: $web-xdark !important;
 }
 .biz:hover {
-	background-color: $slate;
-	color: $orange;
+	background-color: $slate !important;
+	color: $orange !important;
 }
 .travel:hover {
-	background-color: $teal;
-	color: $cream;
+	background-color: $teal !important;
+	color: $cream !important;
 }
 .musings:hover {
-	background-color: $blue;
-	color: white;
+	background-color: $blue !important;
+	color: white !important;
 }
 .podcast:hover {
-	background-color: $cream;
-	color: $teal;
+	background-color: $cream !important;
+	color: $teal !important;
 }
 
 
@@ -108,10 +120,20 @@ a {
 	text-align: center;
 	.hero {
 		@extend .full-width-image;
-		background-image: url(/images/silk-dreamscope-jeweledbird-1920.jpg);
-		padding-top: 250px;
-		padding-bottom: 16%;
+		padding-top: 160px;
+		padding-bottom: 24%;
 		margin-bottom: 4%;
+	}
+	.home .hero {
+		background-image: url(/images/goog-deepdream-inverse-2560.jpg);
+	}
+	.rec-page {
+		.hero {
+			background-image: url(/images/silk-dreamscope-jeweledbird-1920.jpg);
+		}
+		.zolo-page-list h1 {
+			font-size: 2em;
+		}
 	}
 	.zolo-page-list {
 		h1 {
@@ -148,14 +170,14 @@ a {
 			&.em {
 				background-image: url(/images/em.svg);
 			}
+			&.rec {
+				background-image: url(/images/rec.svg);
+			}
 		}
 	}
 	.icons-attr {
 		font-size: .5em;
 	}
-}
-.post {
-	padding-top: 72px;
 }
 
 footer {

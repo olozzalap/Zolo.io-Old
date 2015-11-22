@@ -1,0 +1,45 @@
+@media (max-width: 900px) {
+	.site-header .site-title {
+		width: 65%;
+		width: calc(100% - 150px);
+	}
+	.site-header .message-wrap {
+		width: 35%;
+		width: calc(150px);
+	}
+	h3 {
+		font-size: 20px !important;
+	}
+}
+@media (max-width: 500px) {
+	h1 {
+		font-size: 2em;
+		&.rec {
+			font-size: 1.6em;
+		}
+	}
+	h3 {
+		font-size: 18px !important;
+	}
+	.site-header .site-title {
+		width: 100%;
+		h1 {
+			text-align: center;
+		}
+	}
+	.site-header .message-wrap {
+		display: none;
+	}
+
+	.page-content .zolo-page-list {
+		.social-icon {
+			width: 42px;
+			height: 42px;
+			top: -3px;
+		}
+		.rec .social-icon {
+			width: 36px;
+			height: 36px;
+		}
+	}
+}
