@@ -3,8 +3,8 @@
 }
 body {
 	color: $slate;
-	box-sizing: border-box;
 	font-family: 'Raleway', sans-serif;
+	text-align: center;
 }
 h1 {
 	font-size: 3em;
@@ -39,6 +39,14 @@ a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+.pull-left {
+	text-align: left;
+
+}
+.pull-right {
+	text-align: right;
+
 }
 .heading-font {
 	font-family: 'Arvo', serif;
@@ -80,6 +88,18 @@ a {
 	color: $teal !important;
 }
 
+.quote {
+	transition: all 1s ease;
+	background-color: $teal;
+	font-weight: 700;
+	box-sizing: border-box;
+	&:hover {
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Library_of_Congress%2C_Rosenwald_4%2C_Bl._5r.jpg/605px-Library_of_Congress%2C_Rosenwald_4%2C_Bl._5r.jpg);
+		height: 500px;
+		padding-top: 242px;
+	}
+}
+
 
 .site-header {
 	@extend .heading-font;
@@ -99,14 +119,21 @@ a {
 	}
 	h1 {
 		margin-bottom: 0;
+		margin-top: 5px;
 	}
 	h4 {
 		margin-bottom: 4px;
+		margin-top: 5px;
 		text-align: right;
 	}
+	.site-title {
+		text-align: left;
+	}
 	.site-nav {
-		text-align: center;
 		float: none;
+		img {
+			height: 4em;
+		}
 	}
 	.message-wrap {
 		float: right;
@@ -117,7 +144,6 @@ a {
 .page-content {
 	padding-top: 0;
 	padding-bottom: 25px;
-	text-align: center;
 	.hero {
 		@extend .full-width-image;
 		padding-top: 160px;
@@ -135,67 +161,88 @@ a {
 			font-size: 2em;
 		}
 	}
-	.zolo-page-list {
+	.dad-page {
+		.hero {
+			background-image: url(/images/dad-bg.jpg);
+			padding-top: 200px;
+			padding-bottom: 28%;
+		}
+		.zolo-page-list {
+			border-top: 1px $orange solid;
+		}
+		ul {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	.rj-page {
+		.hero {
+			background-image: url(/images/dad-bg.jpg);
+		}
 		h1 {
-			font-weight: 600;
+			margin-top: 60vh;
 		}
-		h1:hover .social-icon {
-			opacity: 1;
-		}
-		.social-icon {
-			@extend .full-width-image;
-			display: inline-block;
-			opacity: 0;
-			vertical-align: middle;
-			height: 64px;
-			width: 64px;
-			position: relative;
-			top: -5px;
-			left: 10px;
-			&.fnf {
-				background-image: url(http://flintandfoster.com/wp-content/uploads/2014/06/IPadRetina_Logo.png);
-			}
-			&.li {
-				background-image: url(/images/li.png);
-			}
-			&.tf {
-				background-image: url(/images/photo.jpg);
-			}
-			&.tw {
-				background-image: url(/images/tw.svg);
-			}
-			&.sc {
-				background-image: url(/images/sc.svg);
-			}
-			&.em {
-				background-image: url(/images/em.svg);
-			}
-			&.rec {
-				background-image: url(/images/rec.svg);
-			}
+		p, img {
+			margin: 60vh auto;
 		}
 	}
 	.icons-attr {
 		font-size: .5em;
+		margin-top: 2em;
+	}
+}
+
+.zolo-page-list {
+	h1 {
+		display: inline-block;
+		width: 33%;
+		box-sizing: border-box;
+		&.page-link {
+			font-weight: 600;
+			display: block;
+			width: 100%;
+		}
+	}
+	h1:hover .social-icon {
+		opacity: 1;
+	}
+	.social-icon {
+		@extend .full-width-image;
+		display: inline-block;
+		opacity: 0;
+		vertical-align: middle;
+		height: 64px;
+		width: 64px;
+		position: relative;
+		top: -5px;
+		left: 10px;
+		&.fnf {
+			background-image: url(http://flintandfoster.com/wp-content/uploads/2014/06/IPadRetina_Logo.png);
+		}
+		&.li {
+			background-image: url(/images/li.png);
+		}
+		&.tf {
+			background-image: url(/images/photo.jpg);
+		}
+		&.tw {
+			background-image: url(/images/tw.svg);
+		}
+		&.sc {
+			background-image: url(/images/sc.svg);
+		}
+		&.em {
+			background-image: url(/images/em.svg);
+		}
+		&.rec {
+			background-image: url(/images/rec.svg);
+		}
 	}
 }
 
 footer {
-	@extend .heading-font;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	// display: none;
-
-	a {
-		display: inline-block;
-		float: left;
-		width: 16.666666%;
-		font-size: 1em;
-		background-color: $slate;
-		color: white;
-		font-weight: bold;
-		text-shadow: 1px 1px $slate-bg;
+	.zolo-page-list {
+		border-top: 1px $teal solid;
+		padding-top: 2em;
 	}
 }
