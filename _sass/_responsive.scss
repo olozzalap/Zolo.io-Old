@@ -1,21 +1,23 @@
 @media (max-width: 900px) {
-	.site-header .site-title {
-		width: 65%;
-		width: calc(100% - 150px);
-	}
-	.site-header .message-wrap {
-		width: 35%;
-		width: calc(150px);
-	}
 	h3 {
 		font-size: 20px !important;
 	}
+	h1 {
+		font-size: 2.5em;
+	}
 	h1.rec {
-		font-size: 2.7em;
 		.social-icon {
 			width: 58px !important;
 			height: 58px !important;
 		}
+	}
+}
+@media (max-width: 560px) {
+	.site-title {
+		display: none !important;
+	}
+	.logo-wrap, .message-wrap {
+		width: 50% !important;
 	}
 }
 @media (max-width: 500px) {

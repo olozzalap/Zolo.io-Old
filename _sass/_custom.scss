@@ -87,6 +87,11 @@ a {
 	background-color: $cream !important;
 	color: $teal !important;
 }
+.gift:hover {
+	cursor: pointer;
+	-webkit-transform: rotate(360deg);
+	  transform: rotate(360deg);
+}
 
 .quote {
 	transition: all 1s ease;
@@ -110,12 +115,14 @@ a {
 	width: 100%;
 	.wrapper {
 		background-color: rgba($blue, .8);
+		text-align: left;
 	}
-	.site-title, .site-nav, .message-wrap {
+	.site-title, .logo-wrap, .message-wrap {
 		display: inline-block;
 		width: 33%;
 		vertical-align: top;
 		margin: 0;
+		float: none;
 	}
 	h1 {
 		margin-bottom: 0;
@@ -126,14 +133,14 @@ a {
 		margin-top: 5px;
 		text-align: right;
 	}
-	.site-title {
-		text-align: left;
+	.logo-wrap {
+		text-align: center;
 	}
-	.site-nav {
-		float: none;
-		img {
-			height: 4em;
-		}
+	.site-title h1:hover, .message-wrap h4:hover {
+		border-radius: 50%;
+	}
+	img {
+		height: 4em;
 	}
 	.message-wrap {
 		float: right;
@@ -177,13 +184,20 @@ a {
 	}
 	.rj-page {
 		.hero {
-			background-image: url(/images/dad-bg.jpg);
+			background-image: url(http://www.urbandognyc.com/wp-content/uploads/2015/07/4th-of-july-fireworks-nyc.jpg);
+			padding-top: 200px;
+			padding-bottom: 36%;
 		}
 		h1 {
 			margin-top: 60vh;
 		}
 		p, img {
 			margin: 60vh auto;
+		}
+	}
+	.kom-page {
+		.hero {
+			background-image: url(http://www.ranisfitness.com/wp-content/uploads/2014/04/kombucha.jpg);
 		}
 	}
 	.icons-attr {
@@ -198,9 +212,11 @@ a {
 		width: 33%;
 		box-sizing: border-box;
 		&.page-link {
-			font-weight: 600;
 			display: block;
 			width: 100%;
+		}
+		&.rec {
+			font-weight: 600;
 		}
 	}
 	h1:hover .social-icon {
@@ -237,12 +253,13 @@ a {
 		&.rec {
 			background-image: url(/images/rec.svg);
 		}
+		&.kom {
+			background-image: url(http://www.culturedfoodlife.com/wp-content/uploads/2014/08/Kombucha.png);
+		}
 	}
 }
 
-footer {
-	.zolo-page-list {
-		border-top: 1px $teal solid;
-		padding-top: 2em;
-	}
+.zolo-page-list {
+	border-top: 1px $teal solid;
+	padding-top: 2em;
 }
